@@ -1,0 +1,164 @@
+/* vid-14.1
+
+in dos base architecture a program have 64kb to runs means 65536b.
+
+Address of Operator-
+* & is known as address of operator.
+* it is an unary operator.
+* operand must be the name of variable.
+
+Indirection Operator
+ (*) is indirection operator.
+ it is also known as dereferencing operator.
+ it is an unary operator.
+ it takes address as an argument.
+ * returns the content?container whose addressis its argument.
+
+
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+ int x=10, *j;
+ j=&x;
+ clrscr();
+ printf("%d",x);
+ printf("\n%u",&x);
+ printf("\n%d",*&x);  // x=*&x and *j=&x
+ printf("\n%u",&j);
+ getch();
+}
+
+Note:- always use %u for printing address. cuz %u- range(0 to 65535)
+and %d-range(-32768 to 32767)
+
+question-
+ int x=5;
+ &x=7        error      x(5) -2048
+ we cannot store anything in &x as &x is not a variable it is the way to
+ represent address of block x.
+
+
+ we can't write & on the left side of of assignment operator(=).
+ eg. &x=7 wrong and    j=&x right
+
+
+
+ int x=5 and j=&x       x(5)-2048    j(2048)-3000 but j has to be declared
+ before use. we can store address in the another variable.
+
+ -here j is not an ordinary variable like any other integer variable.
+ -it is a variable which contains the address of another varaible.
+
+
+
+ -so pointer is a variable that contains address of another variable.
+ -pointer is always consumes 2 bytes in memory.
+
+
+
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+ int x=5, *j;  // '*' this symbol is only for showing this as a pointer.
+ clrscr();
+ j=&x;
+ printf("%d %u\n",x,j);
+ printf("%d %u\n",*j,&x); // *j=variable of which address j contains means x
+ printf("%u",*&j);
+ getch();
+ }
+
+
+
+ Base address
+
+ int a, *j;  j=&a  pointer made in a data type then pointer contain address
+ of variable of that datatype.
+ float b, *k k=&b
+ char c, *r  r=&c
+
+
+//vid-14.2
+
+//Extended Concepts of poi
+
+
+
+{
+ x=5,*p,**q,***r;
+ p=&x;
+ q=&p
+ r=&q.
+}
+
+// no of stars indicate that level of pointer. a pointer contains address of
+ one level less variable address
+
+ eg. **q - 2 level and contains address of 1 level p.
+
+ if we want to change value of x by another pointer-
+
+ then
+		**q=7    x=5 before x=7 now
+	by r
+		***r=9 x=5 before x=9 now
+
+
+   and this is the extended concept of pointer
+
+- Pointers arithmeetic
+
+* we cannot add, multiply or divide two addresses(subtraction is possible).
+* we cannot multiply an integer to an address and similarly we cannot divide
+  an address with an integer.
+
+  int a,b;
+  int *p,*q;
+  p=&a;
+  q=&b;
+
+ eg. &a+&b   not possible
+ eg. p+q,p/q,p*q     not possible
+
+ &a*5 and &a/5 not possible
+
+
+* we can add or subtract integer to form an address.
+
+-formula of addition
+
+       pointer+n=pointer+sizeof(type of pointer)*n;
+		 address of p=1000
+       p+1= 1000+2*1=1002;
+       p+4= 1000+2*4=1008;
+
+       float p;
+	p+3= 1000+4*3=1012
+
+-formula of subtraction
+
+		pointer1-pointer2=literal subtraction/sizeof(type of pointer)
+
+eg. p=1000 and q=1020 (addresses)
+	  q-p=(1020-1000)/2=10
+
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+ int x=5, y=7, *p, *q;
+ p=&x;
+ q=&y;
+ clrscr();
+ printf("%d\n%d\n",x,y);
+ printf("%u\n",p);
+ printf("%u\n",q);
+ printf("\n%u",(p-q));
+ getch();
+ }
+
+
+
+*/

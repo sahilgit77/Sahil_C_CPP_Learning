@@ -1,0 +1,151 @@
+/* vid-13.1
+
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+ char s[10] = "SAURABH"; // "S","A","U","R","A","B","H";
+ int i;
+ clrscr();
+// for(i=0;s[i]!='\0';i++) //we don't need to know how many characters in the string if we use null character.
+// printf("%c",s[i]); // to printing each character
+// printf("%s",s); //for printing full string in once.
+ puts(s); //used for printing only string.
+ getch();
+}
+
+
+Note:-we store this name in array, sometime we enters name from user we
+don't know when array stop, so we use string for this and array runs till
+the char of string and we use null char for this bcz null char situated last
+in the string.
+
+
+//if we want to enter name from user.
+
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+ char s[20];
+ int i;
+ clrscr();
+ printf("enter your name\n");
+ gets(s); // scanf("%s",s);  //s=1000=&s[0]
+ puts(s); //puts(&s[0]);
+ getch();
+ }
+
+
+Note:- if we put sahil then result sahil and if we put sahil khatri then
+result sahil cuz in scanf can't take multi word string and consider space as
+data separater, this is drawback of scanf and we use gets(s) bcz it take
+words after space.
+
+
+//vid-13.2
+
+String related functions
+
+*strlen()-in this fun we pass string and address of array of string then
+	  it calculates the length of string
+
+*strrev()-used for reversing string and takes single argument as the
+	  address of string
+
+*strlwr()-converts the char in lwr case which are in upr case
+
+*strupr()-viceversa of strlwr
+
+*strcpy()-it has two arguments strcpy(s,"sahil) then it copies string
+
+*strcmp()-it compares both string strcmp("AMAR","AMAN") compares and gives
+	  difference ascii code of 'R'-ascii code of 'N' and gives difference
+	  as return value if return(0) then string is same if return(!=0)
+	  then not same.
+
+*strcat()-strcat(s,"Student") we one string "hello" then this fun concates
+	  both string and gives result hellostudent
+
+
+Handling Multiple Strings
+eg.
+ char s[3][10]={"BHOPAL","DELHI","KANPUR"}
+		0 1 2 3 4 5 6 7 8 9
+	   0    B H A O P A L
+	   1    D E L H I
+	   2    K A N P U R
+	    three stirngs
+
+
+
+//if we enters string from user
+
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+ char s[3][10];
+ int i;
+ clrscr();
+ printf("enter three strings\n");
+ for(i=0;i<=2;i++)
+  gets(&s[i][0]);   //gets(s[i])
+ for(i=0;i<=2;i++)
+  printf("%s\n",s[i]);
+  getch();
+}
+
+
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+ char s[7]= "SAHIL";
+ int i;
+ clrscr();
+ printf("%s",s);
+ printf("\n%c",s[0]);
+ printf("\n%u",&s[0]);
+ printf("\n%u",&s[1]);
+ getch();
+ }
+
+//vid-15.3
+//write a fun to calculate the length of the string and reverse the string
+
+#include<stdio.h>
+#include<conio.h>
+int length(char *);
+char* reverse(char*);
+
+char* reverse(char*p)   //here char* means we return address
+{
+ int l,i;
+ char t;
+ for(l=0;*(p+l)!='\0';l++);
+ for(i=0;i<l/2;i++)
+ {
+  t=*(p+i);
+  *(p+i)=*(p+l-1-i);
+  *(p+l-1-i)=t;
+ }
+ return(p);
+}
+
+int length(char *p)
+{
+ int i;
+ for(i=0;*(p+i)!='\0';i++);
+ return(i);
+}
+main()
+{
+ clrscr();
+ printf("\n%d",length("Computer"));
+ printf("\n%s",reverse("Computer"));
+ getch();
+}         */
+
+#include<stdio.h>
+#include<conio.h>

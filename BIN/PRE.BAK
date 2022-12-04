@@ -1,0 +1,74 @@
+/*#include<stdio.h>
+#include<conio.h>
+#define sum(a,b) a*b
+main()
+{
+ int r;
+ clrscr();
+ printf("%d",sum((3+4),(4-1)));
+ getch();
+}
+
+
+
+
+
+//preprocessor commands in c
+- #if, #else, #elif, #endif
+
+- #ifdef, #ifndef
+
+- ##
+
+
+
+
+#=preprocessor directive
+include= preprocessor command
+
+
+we .c file preprocessor converts it in a file to which compiler reads.
+
+eg.
+//file 1
+#if
+....
+....
+...
+#endif
+
+if condn with #if is true then preprocessor converts it in compilers file.
+
+
+//eg.
+
+//#if #else #endif
+
+#include<stdio.h>
+#define age 19
+int main()
+{
+ #if age>=18
+	printf("eligible for vote");
+ #else
+	printf("not eligible for vote");
+ #endif
+ return 0;
+}
+
+*/
+
+
+#include<stdio.h>
+#define NUMBER 0
+int main()
+{
+	#if NUMBER>0
+		printf("\n number is positive");
+	#elif NUMBER<0
+		printf("\n number is negative");
+	#else 
+		printf("\n number is zero");
+	#endif
+	return 0;
+}

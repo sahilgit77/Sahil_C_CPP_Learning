@@ -1,0 +1,36 @@
+/*
+a[i]=1-d array, a[i][j]=2-d array(no. of variables=i*j),
+a[i][j][k]=3-array
+
+vid=12.1
+
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+ int A[3][3],B[3][3],C[3][3],i,j;
+ clrscr();
+ printf("enter 9 numbers for first matrix");
+	for(i=0;i<=2;i++)
+	for(j=0;j<=2;j++)
+		scanf("%d",&A[i][j]);
+ printf("enter 9 numbers for second matrix");
+	for(i=0;i<=2;i++)
+	for(j=0;j<=2;j++)
+		scanf("%d",&B[i][j]);
+
+ for(i=0;i<=2;i++)
+{
+ for(j=0;j<=2;j++)
+ {
+	C[i][j]=A[i][j]+B[i][j];
+	printf(" %d ",C[i][j]);
+ }
+ printf("\n");
+}
+getch();
+}
+
+
+*/
+

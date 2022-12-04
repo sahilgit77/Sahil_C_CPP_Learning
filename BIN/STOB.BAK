@@ -1,0 +1,17 @@
+/*vid-7.1 Classes and Objects
+-the only differencce b/w structure and classs is that,
+	*The member of structure are bydefault public and members of class
+	are by default private
+
+
+*/
+
+
+
+#include<iostream.h>
+#include<conio.h>
+main()
+{
+ clrscr();
+
+}
