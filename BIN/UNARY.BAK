@@ -1,0 +1,30 @@
+/* operator groups
+UABRLCA
+1. UNARY OPERATOR(required 1 operand) binary(2 operands) turnury(3 operands)
+2. ARITHMETIC OPERATOR
+3. BITWISE OPERATOR
+4. RELATIONAL OPERATOR
+5. LOGICAL OPRATOR
+6. CONDITIONAL OPERATOR
+7. ASSIGNMENT OPERATOR
+
+
+1. unary operator
++,-,++,--,sizzeof()
+
+*/
+
+// ++ increment operator
+
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+int x=3;
+clrscr();
+x++; //x=x+1        post increment(HAVING LEAST PRIORITY LESS THAN EVEN ASSIGNMENT OPERATOR)
+printf("%d",x);
+++x;    //x=x+1 same meaning before x=4 and now x=5     pre increment( HAVING MOST PRIORITY)
+printf("%d",x")
+getch();
+}

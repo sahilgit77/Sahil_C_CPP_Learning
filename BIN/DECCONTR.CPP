@@ -1,0 +1,86 @@
+/* DECISION CONTROL IN C:-
+
+eg.	main()
+	{
+	line 1;   these are instructions and are controlled by processor
+	line 2;   and bydefault move in a sequence
+	line 3;
+	line 4;
+	}
+
+	if we want to execute line 1 then line 4 by skipping line 2&3
+	for this we study control instruction.
+
+CONTROL INSTRUCTIONS
+1. DECISION CONTROL INSTRUCTION
+2. ITERATIVE CONTROL INSTRUCTION
+3. SWITCH CASE CONTROL INSTRUCTION
+4. GOTO CONTROL INSTRUCTION
+
+
+1. DECISION CONTROL INSTRUCTION/selection control instruction
+* if
+* if-else
+* conditional operator(?:)
+
+
+*/
+
+
+
+/*
+USE OF IF
+
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+clrscr();
+printf("hello");    //if we want to skip printf("bye") we use 'if'
+if(3>4)    // if condn is true then block will be execute
+	   // if condn is false then block will not execute
+{
+printf("bye");
+}
+getch();
+}
+
+
+*/
+
+/* write a program to check the no. is +ve or not */
+
+
+  #include<stdio.h>
+  #include<conio.h>
+  main()
+  {
+  int x;
+  clrscr();
+  printf("enter the number");
+  scanf("%d",&x);
+  if(x>=0) //if(x is _ve) compiler can't understand this here a mathematical statement is must
+  {
+  printf("positive");
+  }
+  if(x<0)
+  {
+  printf("negetive");
+  }
+  getch();
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+int x;
+clrscr();
+x=17%4;
+printf("%d",x);
+getch();
+}
+
+
+/*
+%module operator is used for
+telling remainder and used for checking divisiblity
+*/
